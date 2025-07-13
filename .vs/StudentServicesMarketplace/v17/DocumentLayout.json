@@ -1,0 +1,701 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\views\\services\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:views\\services\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\views\\services\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:views\\services\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\views\\services\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:views\\services\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\views\\orders\\confirmpayment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:views\\orders\\confirmpayment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\views\\orders\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:views\\orders\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\configuration\\stripesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:configuration\\stripesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\controllers\\servicescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:controllers\\servicescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\views\\orders\\incomingorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:views\\orders\\incomingorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\views\\services\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:views\\services\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\areas\\identity\\pages\\_authlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:areas\\identity\\pages\\_authlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\views\\services\\myservices.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:views\\services\\myservices.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\migrations\\20250531133612_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:migrations\\20250531133612_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\studentservicesmarketplace.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:studentservicesmarketplace.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\models\\paymenttransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:models\\paymenttransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\views\\orders\\processpayment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:views\\orders\\processpayment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\models\\viewmodels\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:models\\viewmodels\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\services\\stripepaymentprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:services\\stripepaymentprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\interfaces\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:interfaces\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\interfaces\\ipaymentprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:interfaces\\ipaymentprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\models\\supportticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:models\\supportticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\models\\advertisement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:models\\advertisement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|c:\\users\\hs848\\onedrive\\desktop\\studentsskills\\studentservicesmarketplace\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39314438-5DD3-F287-E6AE-35E2D406CB9E}|StudentServicesMarketplace.csproj|solutionrelative:models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Views\\Orders\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Orders\\Details.cshtml",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Views\\Orders\\Details.cshtml",
+              "RelativeToolTip": "Views\\Orders\\Details.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-31T05:56:02.069Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Views\\Services\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "Views\\Services\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Views\\Services\\Index.cshtml.cs",
+              "RelativeToolTip": "Views\\Services\\Index.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:00:32.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Views\\Services\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Services\\Details.cshtml",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Views\\Services\\Details.cshtml",
+              "RelativeToolTip": "Views\\Services\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-31T17:30:32.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ConfirmPayment.cshtml",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Views\\Orders\\ConfirmPayment.cshtml",
+              "RelativeDocumentMoniker": "Views\\Orders\\ConfirmPayment.cshtml",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Views\\Orders\\ConfirmPayment.cshtml",
+              "RelativeToolTip": "Views\\Orders\\ConfirmPayment.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAhwCsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-31T16:33:56.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-30T18:26:34.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAC4BAAAAAAAAAAAYwD0BAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-31T14:28:04.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Service.cs",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Models\\Service.cs",
+              "RelativeDocumentMoniker": "Models\\Service.cs",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Models\\Service.cs",
+              "RelativeToolTip": "Models\\Service.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T14:52:27.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAADwv1cAAAB+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-31T14:06:57.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAcwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T14:49:27.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "StripeSettings.cs",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Configuration\\StripeSettings.cs",
+              "RelativeDocumentMoniker": "Configuration\\StripeSettings.cs",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Configuration\\StripeSettings.cs",
+              "RelativeToolTip": "Configuration\\StripeSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T15:51:31.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ServicesController.cs",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Controllers\\ServicesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ServicesController.cs",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Controllers\\ServicesController.cs",
+              "RelativeToolTip": "Controllers\\ServicesController.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAkwE8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T18:25:06.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "Controllers\\OrdersController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAADQAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T18:25:48.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Views\\Services\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Services\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Views\\Services\\Index.cshtml",
+              "RelativeToolTip": "Views\\Services\\Index.cshtml",
+              "ViewState": "AgIAADsAAAAAAAAAAAAhwEsAAAB2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-31T16:15:13.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PaymentService.cs",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Services\\PaymentService.cs",
+              "RelativeDocumentMoniker": "Services\\PaymentService.cs",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Services\\PaymentService.cs",
+              "RelativeToolTip": "Services\\PaymentService.cs",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAuwKIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T15:59:21.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IncomingOrders.cshtml",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Views\\Orders\\IncomingOrders.cshtml",
+              "RelativeDocumentMoniker": "Views\\Orders\\IncomingOrders.cshtml",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Views\\Orders\\IncomingOrders.cshtml",
+              "RelativeToolTip": "Views\\Orders\\IncomingOrders.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-31T16:12:00.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-31T14:30:02.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-30T15:05:55.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-31T13:48:42.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "_AuthLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Areas\\Identity\\Pages\\_AuthLayout.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\_AuthLayout.cshtml",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Areas\\Identity\\Pages\\_AuthLayout.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\_AuthLayout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-31T14:29:21.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Views\\Services\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Services\\Create.cshtml",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Views\\Services\\Create.cshtml",
+              "RelativeToolTip": "Views\\Services\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-31T14:03:10.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-30T17:36:26.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T13:37:08.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "_Layout.cshtml.css",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-31T13:47:34.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "20250531133612_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Migrations\\20250531133612_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250531133612_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Migrations\\20250531133612_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\20250531133612_InitialCreate.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T13:36:58.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T16:02:54.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AgIAANYAAAAAAAAAAAA3wOEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T17:36:32.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "MyServices.cshtml",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Views\\Services\\MyServices.cshtml",
+              "RelativeDocumentMoniker": "Views\\Services\\MyServices.cshtml",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Views\\Services\\MyServices.cshtml",
+              "RelativeToolTip": "Views\\Services\\MyServices.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAkwEMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-31T13:59:26.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAqwBsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T18:14:29.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "StudentServicesMarketplace",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\StudentServicesMarketplace.csproj",
+              "RelativeDocumentMoniker": "StudentServicesMarketplace.csproj",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\StudentServicesMarketplace.csproj",
+              "RelativeToolTip": "StudentServicesMarketplace.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-30T15:53:50.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "PaymentTransaction.cs",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Models\\PaymentTransaction.cs",
+              "RelativeDocumentMoniker": "Models\\PaymentTransaction.cs",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Models\\PaymentTransaction.cs",
+              "RelativeToolTip": "Models\\PaymentTransaction.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T15:45:51.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ProcessPayment.cshtml",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Views\\Orders\\ProcessPayment.cshtml",
+              "RelativeDocumentMoniker": "Views\\Orders\\ProcessPayment.cshtml",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Views\\Orders\\ProcessPayment.cshtml",
+              "RelativeToolTip": "Views\\Orders\\ProcessPayment.cshtml",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAAAHwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-31T05:55:07.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Models\\ViewModels\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Models\\ViewModels\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T18:20:49.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ScaffoldingReadMe.txt",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\ScaffoldingReadMe.txt",
+              "RelativeDocumentMoniker": "ScaffoldingReadMe.txt",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\ScaffoldingReadMe.txt",
+              "RelativeToolTip": "ScaffoldingReadMe.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-05-30T17:35:50.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "StripePaymentProcessor.cs",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Services\\StripePaymentProcessor.cs",
+              "RelativeDocumentMoniker": "Services\\StripePaymentProcessor.cs",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Services\\StripePaymentProcessor.cs",
+              "RelativeToolTip": "Services\\StripePaymentProcessor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T15:58:22.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "IPaymentService.cs",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Interfaces\\IPaymentService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IPaymentService.cs",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Interfaces\\IPaymentService.cs",
+              "RelativeToolTip": "Interfaces\\IPaymentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T15:55:02.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "IPaymentProcessor.cs",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Interfaces\\IPaymentProcessor.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IPaymentProcessor.cs",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Interfaces\\IPaymentProcessor.cs",
+              "RelativeToolTip": "Interfaces\\IPaymentProcessor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T15:54:22.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAQwEkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T15:53:15.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "SupportTicket.cs",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Models\\SupportTicket.cs",
+              "RelativeDocumentMoniker": "Models\\SupportTicket.cs",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Models\\SupportTicket.cs",
+              "RelativeToolTip": "Models\\SupportTicket.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T15:46:29.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Advertisement.cs",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Models\\Advertisement.cs",
+              "RelativeDocumentMoniker": "Models\\Advertisement.cs",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Models\\Advertisement.cs",
+              "RelativeToolTip": "Models\\Advertisement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T15:04:43.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "Models\\Order.cs",
+              "ToolTip": "C:\\Users\\hs848\\OneDrive\\Desktop\\StudentsSkills\\StudentServicesMarketplace\\Models\\Order.cs",
+              "RelativeToolTip": "Models\\Order.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAywC4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T14:52:56.754Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

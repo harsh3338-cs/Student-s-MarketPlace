@@ -1,0 +1,293 @@
+﻿@model StudentServicesMarketplace.Models.Order
+@using StudentServicesMarketplace.Models // For OrderStatus, PaymentStatus enums
+@using System.Linq // For LINQ methods
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Mvc.Rendering // For SelectListItem
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    ViewData["Title"] = "Order Details - #" + Model.Id;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var currentUserId = UserManager.GetUserId(User);
+    bool isClientOfThisOrder = Model.ClientId == currentUserId;
+    bool isStudentProviderOfThisOrder = Model.Service.StudentId == currentUserId;
+    bool isAdminViewing = User.IsInRole("Admin");
+}
+
+<h1>@ViewData["Title"]</h1>
+<p class="text-muted">Detailed information about your order.</p>
+<hr />
+
+<div class="row">
+    <div class="col-md-7">
+        <h4>Order Information</h4>
+        <dl class="row">
+            <dt class="col-sm-4">Order ID:</dt>
+            <dd class="col-sm-8">@Model.Id</dd>
+
+            <dt class="col-sm-4">Service:</dt>
+            <dd class="col-sm-8">
+                <a asp-controller="Services" asp-action="Details" asp-route-id="@Model.ServiceId">@Model.Service.Title</a>
+            </dd>
+
+            <dt class="col-sm-4">Provider:</dt>
+            <dd class="col-sm-8">@Model.Service.Student.FirstName @Model.Service.Student.LastName</dd>
+
+            <dt class="col-sm-4">Client:</dt>
+            <dd class="col-sm-8">@Model.Client.FirstName @Model.Client.LastName</dd>
+
+            <dt class="col-sm-4">Order Date:</dt>
+            <dd class="col-sm-8">@Model.OrderDate.ToLocalTime().ToString("MMMM dd, yyyy h:mm tt")</dd>
+
+            <dt class="col-sm-4">Price at Order:</dt>
+            <dd class="col-sm-8">$@Model.PriceAtOrder.ToString("F2")</dd>
+
+            <dt class="col-sm-4">Current Status:</dt>
+            <dd class="col-sm-8">
+                <span class="badge fs-6 bg-@(GetOrderStatusBadgeClass(Model.Status))">
+                    @Model.Status.ToString().Replace("By", " by ")
+                </span>
+            </dd>
+
+            @if (!string.IsNullOrEmpty(Model.ClientNotes))
+            {
+                <dt class="col-sm-4">Client Notes:</dt>
+                <dd class="col-sm-8">@Model.ClientNotes</dd>
+            }
+            @if (Model.ScheduledDateTime.HasValue)
+            {
+                <dt class="col-sm-4">Scheduled For:</dt>
+                <dd class="col-sm-8">@Model.ScheduledDateTime.Value.ToLocalTime().ToString("MMMM dd, yyyy h:mm tt")</dd>
+            }
+        </dl>
+    </div>
+    <div class="col-md-5">
+        @* Placeholder for potentially showing an image of the service or other relevant info *@
+        @if (!string.IsNullOrEmpty(Model.Service.ImageUrl))
+        {
+            <img src="@Model.Service.ImageUrl" alt="Service Image" class="img-fluid rounded shadow-sm" style="max-height: 300px; object-fit: cover;" />
+        }
+        else
+        {
+            <img src="https://via.placeholder.com/400x300.png?text=Service" alt="Service Image" class="img-fluid rounded shadow-sm" />
+        }
+    </div>
+</div>
+<hr />
+
+@* --- Payment History --- *@
+@if (Model.PaymentTransactions != null && Model.PaymentTransactions.Any())
+{
+    <h4 class="mt-4">Payment History</h4>
+    <table class="table table-sm table-striped table-hover">
+        <thead class="table-light">
+            <tr>
+                <th>Transaction ID (Stripe)</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Timestamp</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pt in Model.PaymentTransactions.OrderByDescending(p => p.Timestamp))
+            {
+                <tr>
+                    <td class="font-monospace small">@pt.StripePaymentIntentId</td>
+                    <td>$@pt.Amount.ToString("F2")</td>
+                    <td>
+                        <span class="badge bg-@(GetPaymentStatusBadgeClass(pt.Status))">@pt.Status</span>
+                    </td>
+                    <td>@pt.Timestamp.ToLocalTime().ToString("g")</td>
+                    <td class="small text-muted">@pt.GatewayResponse</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p class="mt-3 alert alert-info">No payment attempts have been recorded for this order yet.</p>
+}
+<hr />
+
+@* --- Actions based on role and order status --- *@
+<div class="mt-4 mb-3">
+    <h4>Order Actions</h4>
+
+    @if (isClientOfThisOrder)
+    {
+        if (Model.Status == OrderStatus.PendingPayment)
+        {
+            <a asp-action="ConfirmPayment" asp-route-orderId="@Model.Id" class="btn btn-lg btn-success me-2">
+                <i class="fas fa-credit-card"></i> Proceed to Payment Confirmation
+            </a>
+        }
+        @* Add other client-specific actions here if needed *@
+        <a asp-action="MyOrders" class="btn btn-outline-secondary">
+            <i class="fas fa-list-alt"></i> Back to My Orders
+        </a>
+    }
+    else if (isStudentProviderOfThisOrder || isAdminViewing)
+    {
+        // Students and Admins can see status update options
+        if (CanUpdateStatus(Model.Status))
+        {
+            <form asp-action="UpdateStatus" asp-route-orderId="@Model.Id" method="post" class="mt-3 p-3 border rounded bg-light shadow-sm">
+                <h5>Update Order Status:</h5>
+                @Html.AntiForgeryToken()
+                <div class="input-group">
+                    <select name="newStatus" class="form-select" asp-items="@GetValidNextStatusOptions(Model.Status, isAdminViewing)">
+                        <option value="">-- Select New Status --</option>
+                    </select>
+                    <button type="submit" class="btn btn-warning">
+                        <i class="fas fa-sync-alt"></i> Update Status
+                    </button>
+                </div>
+                @if (isAdminViewing)
+                {
+                    <small class="form-text text-muted">Admin: Select a valid next status.</small>
+                }
+            </form>
+        }
+        else
+        {
+            <p class="text-muted mt-3">No further status updates are available for this order's current state (@Model.Status.ToString().Replace("By", " by")).</p>
+        }
+
+        if (isStudentProviderOfThisOrder && !isAdminViewing) // Don't show if Admin is also the provider for some reason
+        {
+            <a asp-action="IncomingOrders" class="btn btn-outline-secondary mt-3">
+                <i class="fas fa-arrow-left"></i> Back to Incoming Orders
+            </a>
+        }
+        else if (isAdminViewing)
+        {
+            @* TODO: Add link for Admin to go back to an Admin Order Management page if you build one *@
+            <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary mt-3">
+                <i class="fas fa-tachometer-alt"></i> Back to Admin Dashboard (Example)
+            </a>
+        }
+    }
+    else // Not owner, not provider, not admin - should ideally not reach here if controller logic is correct
+    {
+        <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary">
+            <i class="fas fa-home"></i> Back to Home
+        </a>
+    }
+</div>
+
+@functions {
+    private string GetOrderStatusBadgeClass(OrderStatus status)
+    {
+        return status switch
+        {
+            OrderStatus.PendingPayment => "secondary",
+            OrderStatus.PendingConfirmation => "info",
+            OrderStatus.PaymentProcessing => "primary",
+            OrderStatus.Confirmed => "success",
+            OrderStatus.InProgress => "primary",
+            OrderStatus.Completed => "dark",
+            OrderStatus.CancelledByClient => "danger",
+            OrderStatus.CancelledByStudent => "danger",
+            OrderStatus.PaymentFailed => "danger",
+            _ => "light text-dark"
+        };
+    }
+
+    private string GetPaymentStatusBadgeClass(PaymentStatus status)
+    {
+        return status switch
+        {
+            PaymentStatus.Succeeded => "success",
+            PaymentStatus.Failed => "danger",
+            PaymentStatus.Processing => "info",
+            PaymentStatus.Pending => "warning",
+            PaymentStatus.Refunded => "dark",
+            _ => "light text-dark"
+        };
+    }
+
+    // Determines if the status update form should be shown at all
+    private bool CanUpdateStatus(OrderStatus currentStatus)
+    {
+        return currentStatus != OrderStatus.Completed &&
+               currentStatus != OrderStatus.CancelledByClient &&
+               currentStatus != OrderStatus.CancelledByStudent &&
+               currentStatus != OrderStatus.PaymentFailed; // Can't update from these terminal states via this form
+    }
+
+
+    // Helper to filter valid next statuses for the dropdown (Provider/Admin view)
+    private bool IsValidNextStatusLogic(OrderStatus currentStatus, OrderStatus nextStatus, bool isAdmin)
+    {
+        // If the current status doesn't allow updates, no next status is valid.
+        if (!CanUpdateStatus(currentStatus) && !(isAdmin && currentStatus == OrderStatus.Completed && (nextStatus == OrderStatus.CancelledByClient || nextStatus == OrderStatus.CancelledByStudent)))
+        {
+            return false;
+        }
+
+        if (isAdmin)
+        {
+            // Admin can cancel a completed order (e.g., for refunds or issues)
+            if (currentStatus == OrderStatus.Completed && (nextStatus == OrderStatus.CancelledByClient || nextStatus == OrderStatus.CancelledByStudent)) return true;
+            // Admin can generally move between any non-terminal states or into a terminal state
+            // Avoid allowing admin to set to PendingPayment or PendingConfirmation as these are system-driven initially
+            if (nextStatus == OrderStatus.PendingPayment || nextStatus == OrderStatus.PendingConfirmation) return false;
+            return true; // Admin has broad powers, but avoid regressing to initial payment steps
+        }
+
+        // Student provider logic
+        // (CanUpdateStatus already filters out terminal states for students)
+        if (currentStatus == OrderStatus.Confirmed)
+        {
+            return nextStatus == OrderStatus.InProgress ||
+                   nextStatus == OrderStatus.Completed ||
+                   nextStatus == OrderStatus.CancelledByStudent;
+        }
+        if (currentStatus == OrderStatus.InProgress)
+        {
+            return nextStatus == OrderStatus.Completed ||
+                   nextStatus == OrderStatus.CancelledByStudent;
+        }
+        // Student might cancel from PendingConfirmation or PaymentProcessing if payment hasn't gone through
+        // but usually not from PendingPayment (client should do that or it auto-fails)
+        if ((currentStatus == OrderStatus.PendingConfirmation || currentStatus == OrderStatus.PaymentProcessing) &&
+            nextStatus == OrderStatus.CancelledByStudent)
+        {
+            return true;
+        }
+
+        return false; // Default to not allowing the transition for student
+    }
+
+    private IEnumerable<SelectListItem> GetValidNextStatusOptions(OrderStatus currentStatus, bool isAdmin)
+    {
+        var allStatuses = Enum.GetValues(typeof(OrderStatus)).Cast<OrderStatus>();
+
+        // Filter out the current status itself from options, unless admin wants to re-apply for some reason (unlikely)
+        var validNextStatuses = allStatuses
+            .Where(nextStatus => nextStatus != currentStatus && IsValidNextStatusLogic(currentStatus, nextStatus, isAdmin))
+            .Select(status => new SelectListItem
+                {
+                    Value = status.ToString(),
+                    Text = status.ToString().Replace("By", " by ")
+                });
+        return validNextStatuses;
+    }
+}
+
+@section Scripts {
+        @* Ensure Font Awesome is linked in your _Layout.cshtml if you use these icons *@
+        @* Example for a generic confirmation (if you add client-side cancel buttons)
+        <script>
+            // Simple confirmation script
+            function confirmAction(event, message) {
+                if (!confirm(message || 'Are you sure?')) {
+                    event.preventDefault();
+                }
+            }
+        </script>
+        *@
+}

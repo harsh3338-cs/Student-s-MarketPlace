@@ -1,0 +1,144 @@
+﻿@model IEnumerable<StudentServicesMarketplace.Models.Service> // Assuming you still pass featured services
+@{
+    ViewData["Title"] = "Welcome to Student Services Marketplace";
+    // You can remove the Layout = "_SomeOtherLayout" if you want to use the default _Layout.cshtml
+    // If you created a special landing page layout, specify it here.
+}
+
+@* --- Hero Section with Background --- *@
+<div class="hero-section text-white text-center">
+    <div class="hero-overlay"></div> @* For darkening/tinting the background image *@
+    <div class="container position-relative">
+        @* position-relative for content on top of overlay *@
+        <h1 class="display-3 fw-bold mb-3 animate-on-scroll">Unlock Your Potential. Offer Your Skills.</h1>
+        <p class="lead mb-4 animate-on-scroll animation-delay-1">
+            The ultimate platform connecting talented students with clients seeking unique services. <br />
+            From tutoring and art to tech support and writing, find or offer it all here.
+        </p>
+        <div class="animate-on-scroll animation-delay-2">
+            <a asp-controller="Services" asp-action="Index" class="btn btn-lg btn-light me-2 hero-btn">Browse Services</a>
+            @if (User.IsInRole("Student"))
+            {
+                <a asp-controller="Services" asp-action="Create" class="btn btn-lg btn-outline-light hero-btn">Offer Your Service</a>
+            }
+            else if (!User.Identity.IsAuthenticated)
+            {
+                <a asp-area="Identity" asp-page="/Account/Register" asp-route-Input.Role="Student" class="btn btn-lg btn-outline-light hero-btn">Become a Seller</a>
+            }
+        </div>
+    </div>
+</div>
+
+@* --- How It Works Section --- *@
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">How It Works</h2>
+        <div class="row text-center g-4">
+            <div class="col-md-4 animate-on-scroll">
+                <div class="p-3">
+                    <i class="fas fa-search fa-3x text-primary mb-3"></i> @* Font Awesome Icon *@
+                    <h4>1. Discover</h4>
+                    <p class="text-muted">Clients browse through a wide array of services offered by skilled students.</p>
+                </div>
+            </div>
+            <div class="col-md-4 animate-on-scroll animation-delay-1">
+                <div class="p-3">
+                    <i class="fas fa-handshake fa-3x text-primary mb-3"></i> @* Font Awesome Icon *@
+                    <h4>2. Connect & Hire</h4>
+                    <p class="text-muted">Connect directly with students, discuss requirements, and hire them for their services.</p>
+                </div>
+            </div>
+            <div class="col-md-4 animate-on-scroll animation-delay-2">
+                <div class="p-3">
+                    <i class="fas fa-star fa-3x text-primary mb-3"></i> @* Font Awesome Icon *@
+                    <h4>3. Get It Done</h4>
+                    <p class="text-muted">Students deliver high-quality work, and clients get their projects completed efficiently.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@* --- Featured Services Section (if you pass them in the model) --- *@
+@if (Model != null && Model.Any())
+{
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Featured Services</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                @foreach (var item in Model.Take(3)) // Show only a few featured ones
+                {
+                    <div class="col animate-on-scroll">
+                        <div class="card h-100 shadow-sm service-card">
+                            <a asp-controller="Services" asp-action="Details" asp-route-id="@item.Id" class="text-decoration-none text-dark">
+                                @if (!string.IsNullOrEmpty(item.ImageUrl))
+                                {
+                                    <img src="@item.ImageUrl" class="card-img-top" alt="@item.Title" style="height: 200px; object-fit: cover;">
+                                }
+                                else
+                                {
+                                    <img src="https://via.placeholder.com/400x200.png?text=@Uri.EscapeDataString(item.Category.ToString())" class="card-img-top" alt="Default Service Image" style="height: 200px; object-fit: cover;">
+                                }
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h5>
+                                    <p class="card-text text-muted small">
+                                        Category: @Html.DisplayFor(modelItem => item.Category)
+                                    </p>
+                                    <div class="mt-auto d-flex justify-content-between align-items-center">
+                                        <span class="fw-bold fs-5 text-primary"> @Html.DisplayFor(modelItem => item.Price) INR</span>
+                                        <span class="text-muted small">By: @item.Student.FirstName</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                }
+            </div>
+            @if (Model.Count() > 3)
+            {
+                <div class="text-center mt-4">
+                    <a asp-controller="Services" asp-action="Index" class="btn btn-outline-primary">View All Services</a>
+                </div>
+            }
+        </div>
+    </section>
+}
+
+
+@* --- Call to Action / Join as Seller Section --- *@
+@if (!User.Identity.IsAuthenticated || !User.IsInRole("Student"))
+{
+    <section class="py-5 text-center cta-section">
+        <div class="container">
+            <h2 class="mb-3">Ready to Share Your Talents?</h2>
+            <p class="lead text-muted mb-4">Join our community of student service providers and start earning.</p>
+            <a asp-area="Identity" asp-page="/Account/Register" asp-route-Input.Role="Student" class="btn btn-lg btn-success">Become a Seller Today</a>
+        </div>
+    </section>
+}
+
+
+@section Scripts {
+@* Optional: Add Font Awesome if not already in _Layout.cshtml for icons *@
+@* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> *@
+
+@* Optional: Simple scroll animation script *@
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // Optional: stop observing once animated
+                    }
+                });
+            }, { threshold: 0.1 }); // Adjust threshold as needed
+
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+}

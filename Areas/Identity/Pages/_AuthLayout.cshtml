@@ -1,0 +1,38 @@
+﻿@* In Areas/Identity/Pages/_AuthLayout.cshtml *@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Student Services Marketplace</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /> @* Ensure site.css is linked *@
+</head>
+<body class="d-flex flex-column min-vh-100 auth-body-background">
+    @* Optional different background for auth pages *@
+    <header class="py-3 bg-custom-green text-white text-center">
+        @* Applied custom green *@
+        <div class="container">
+            <h1>Student Services Marketplace</h1>
+        </div>
+    </header>
+
+    <main class="flex-grow-1 d-flex align-items-center justify-content-center py-4">
+        @RenderBody()
+    </main>
+
+    <footer class="py-3 bg-custom-green text-white text-center mt-auto">
+        @* Applied custom green *@
+        <div class="container">
+            © @DateTime.Now.Year - Student Services Marketplace
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

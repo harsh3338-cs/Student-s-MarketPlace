@@ -1,0 +1,178 @@
+﻿@* These directives MUST be at the top of the file *@
+@using Microsoft.AspNetCore.Identity
+@using StudentServicesMarketplace.Models
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Student Services Marketplace</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/StudentServicesMarketplace.styles.css" asp-append-version="true" />
+</head>
+<body class="d-flex flex-column min-vh-100">
+    @* Added classes for sticky footer *@
+    <header class="site-header">
+        @* Added custom class for more styling options *@
+        @* MODIFIED NAV - Added navbar-dark bg-custom-green (custom class) *@
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-custom-green border-bottom box-shadow">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Student Services</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Services" asp-action="Index">Browse Services</a>
+                        </li>
+
+                        @if (SignInManager.IsSignedIn(User))
+                        {
+                            if (User.IsInRole("Student"))
+                            {
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="studentDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Student Hub
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="studentDropdown">
+                                        <li><a class="dropdown-item" asp-controller="Services" asp-action="MyServices">My Services</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Services" asp-action="Create">Post New Service</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Orders" asp-action="IncomingOrders">Incoming Orders</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" asp-controller="StripeOnboarding" asp-action="Onboard">Payments Setup</a></li>
+                                    </ul>
+                                </li>
+                            }
+                            if (User.IsInRole("Client"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Orders" asp-action="MyOrders">My Orders</a>
+                                </li>
+                            }
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="supportDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Support
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="supportDropdown">
+                                    <li><a class="dropdown-item" asp-controller="Support" asp-action="MyTickets">My Support Tickets</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Support" asp-action="Create">Contact Support</a></li>
+                                </ul>
+                            </li>
+                            if (User.IsInRole("Admin"))
+                            {
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="adminDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Admin Panel
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="adminDropdown">
+                                        <li><a class="dropdown-item" asp-controller="Ads" asp-action="Index">Manage Ads</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Support" asp-action="Index">All Support Tickets</a></li>
+                                    </ul>
+                                </li>
+                            }
+                        }
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+        <!-- Header Ads -->
+        @if (ViewBag.HeaderAds != null && ((List<Advertisement>)ViewBag.HeaderAds).Any())
+        {
+            <div class="container mt-3 mb-3 text-center">
+                @* Added mt-3 for spacing from nav *@
+                @foreach (var ad in (List<Advertisement>)ViewBag.HeaderAds)
+                {
+                    <a href="@ad.TargetUrl" target="_blank" class="d-inline-block m-1">
+                        <img src="@ad.ImageUrl" alt="@ad.Title" class="img-fluid" style="max-height: 90px; border: 1px solid #ddd;" />
+                    </a>
+                }
+            </div>
+        }
+    </header>
+
+    @* Main content area that will grow to push footer down *@
+    <div class="container flex-grow-1">
+        <div class="row">
+            <main role="main" class="col-md-9 pb-3">
+                @* TempData messages *@
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        @TempData["SuccessMessage"]
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                }
+                @if (TempData["ErrorMessage"] != null)
+                {
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        @TempData["ErrorMessage"]
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                }
+                @if (TempData["WarningMessage"] != null)
+                {
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        @TempData["WarningMessage"]
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                }
+                @if (TempData["InfoMessage"] != null)
+                {
+                    <div class="alert alert-info alert-dismissible fade show" role="alert">
+                        @TempData["InfoMessage"]
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                }
+                @RenderBody()
+            </main>
+            <aside class="col-md-3">
+                <h4>Advertisements</h4>
+                @if (ViewBag.SidebarAds != null && ((List<Advertisement>)ViewBag.SidebarAds).Any())
+                {
+                    foreach (var ad in (List<Advertisement>)ViewBag.SidebarAds)
+                    {
+                        <div class="mb-3">
+                            <a href="@ad.TargetUrl" target="_blank">
+                                <img src="@ad.ImageUrl" alt="@ad.Title" class="img-fluid" style="border: 1px solid #ddd;" />
+                            </a>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p>No ads to display.</p>
+                }
+                <hr />
+                <div class="mt-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a asp-controller="Home" asp-action="Privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    @* MODIFIED FOOTER - Added bg-custom-green (custom class) and text-white *@
+    <footer class="site-footer text-white mt-auto py-3 bg-custom-green">
+        <div class="container text-center">
+            © @DateTime.Now.Year - Student Services Marketplace - <a asp-area="" asp-controller="Home" asp-action="Privacy" class="text-white-50">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

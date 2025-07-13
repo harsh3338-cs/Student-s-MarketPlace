@@ -1,0 +1,82 @@
+﻿@model StudentServicesMarketplace.Models.Order
+
+@{
+    ViewData["Title"] = "Confirm Order and Payment";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Or your main app layout
+
+    // Retrieve ViewBag data (ensure they are set in the controller)
+    var price = (decimal)ViewBag.Price;
+    var platformFeePercentage = (decimal)ViewBag.PlatformFeePercentage;
+    var platformFee = (decimal)ViewBag.PlatformFee;
+    var totalAmount = (decimal)ViewBag.TotalAmount; 
+}
+
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-7">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="mb-0 text-center">@ViewData["Title"]</h2>
+                </div>
+                <div class="card-body p-4">
+                    <h4 class="mb-3">Order Summary - #@Model.Id</h4>
+                    <dl class="row">
+                        <dt class="col-sm-4">Service:</dt>
+                        <dd class="col-sm-8">@Model.Service.Title</dd>
+
+                        <dt class="col-sm-4">Provider:</dt>
+                        <dd class="col-sm-8">@Model.Service.Student.FirstName @Model.Service.Student.LastName</dd>
+
+                        <dt class="col-sm-4">Order Date:</dt>
+                        <dd class="col-sm-8">@Model.OrderDate.ToLocalTime().ToString("MMMM dd, yyyy h:mm tt")</dd>
+
+                        @if (!string.IsNullOrEmpty(Model.ClientNotes))
+                        {
+                                <dt class="col-sm-4">Your Notes:</dt>
+                                <dd class="col-sm-8">@Model.ClientNotes</dd>
+                        }
+                    </dl>
+
+                    <hr class="my-4">
+
+                    <h4 class="mb-3">Payment Details</h4>
+                    <div class="d-flex justify-content-between">
+                        <span>Service Price:</span>
+                        <span>$@price.ToString("F2")</span>
+                    </div>
+                    <div class="d-flex justify-content-between text-muted small">
+                        <span>Includes Platform Fee (@(platformFeePercentage * 100)%):</span>
+                        <span>$@platformFee.ToString("F2")</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between fw-bold fs-5">
+                        <span>Total Amount Due:</span>
+                        <span>$@totalAmount.ToString("F2")</span>
+                    </div>
+
+                    <form asp-action="InitiateStripePayment" method="post" class="mt-4">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="orderId" value="@Model.Id" />
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-success btn-lg">
+                                <i class="fas fa-credit-card me-2"></i> Proceed to Secure Payment
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="text-center mt-3">
+                        <a asp-action="MyOrders" class="btn btn-outline-secondary btn-sm">Cancel and Return to My Orders</a>
+                    </div>
+                </div>
+                <div class="card-footer text-muted small">
+                    You will be redirected to our secure payment partner (Stripe) to complete your payment.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+@* Include Font Awesome if you use icons like fas fa-credit-card *@
+@* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> *@
+}

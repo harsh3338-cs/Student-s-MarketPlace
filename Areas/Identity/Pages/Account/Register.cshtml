@@ -1,0 +1,125 @@
+﻿@page
+@{
+    Layout = "/Areas/Identity/Pages/_AuthLayout.cshtml";
+}
+@model RegisterModel
+@{
+    ViewData["Title"] = "Join Student Services Marketplace";
+    Layout = "/Areas/Identity/Pages/_AuthLayout.cshtml"; // Optional: Use a custom auth layout for a different background/style
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-body p-4 p-md-5">
+                    <h2 class="text-center mb-4">@ViewData["Title"]</h2>
+                    <p class="text-center text-muted mb-4">Create your account to offer or find student services.</p>
+
+                    @* --- Social Logins (Placeholders) --- *@
+                    <section>
+                        @if (Model.ExternalLogins?.Count > 0)
+                        {
+                            <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
+                                <div>
+                                    <p>
+                                        @foreach (var provider in Model.ExternalLogins)
+                                        {
+                                            <button type="submit" class="btn btn-outline-secondary w-100 mb-2" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">
+                                                <i class="fab fa-@provider.Name.ToLower()"></i> @* Requires Font Awesome for icons *@
+                                                Continue with @provider.DisplayName
+                                            </button>
+                                        }
+                                    </p>
+                                </div>
+                            </form>
+                        }
+                        else
+                        {
+                            <button type="button" class="btn btn-outline-dark w-100 mb-2 disabled">
+                                <i class="fab fa-google me-2"></i>Continue with Google (Not Configured)
+                            </button>
+                            <button type="button" class="btn btn-outline-dark w-100 mb-3 disabled">
+                                <i class="fab fa-facebook me-2"></i>Continue with Facebook (Not Configured)
+                            </button>
+                        }
+
+                        <div class="text-center my-3">
+                            <span class="text-muted">OR</span>
+                        </div>
+                    </section>
+
+                    @* --- Email/Password Registration Form --- *@
+                    <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3" role="alert"></div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <input asp-for="Input.FirstName" class="form-control" autocomplete="given-name" placeholder="First Name" aria-required="true" />
+                                    <label asp-for="Input.FirstName">First Name</label>
+                                    <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <input asp-for="Input.LastName" class="form-control" autocomplete="family-name" placeholder="Last Name" aria-required="true" />
+                                    <label asp-for="Input.LastName">Last Name</label>
+                                    <span asp-validation-for="Input.LastName" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.Email" class="form-control" autocomplete="username" placeholder="name@example.com" aria-required="true" />
+                            <label asp-for="Input.Email">Email address</label>
+                            <span asp-validation-for="Input.Email" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.Password" class="form-control" autocomplete="new-password" placeholder="Create a password" aria-required="true" />
+                            <label asp-for="Input.Password">Password</label>
+                            <span asp-validation-for="Input.Password" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" placeholder="Confirm your password" aria-required="true" />
+                            <label asp-for="Input.ConfirmPassword">Confirm Password</label>
+                            <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-floating mb-4">
+                            <select asp-for="Input.Role" class="form-select" aria-required="true">
+                                <option value="">-- I want to... --</option>
+                                <option value="Student">Offer services (Student)</option>
+                                <option value="Client">Find and hire services (Client)</option>
+                            </select>
+                            <label asp-for="Input.Role">Register as</label>
+                            <span asp-validation-for="Input.Role" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-grid">
+                            <button id="registerSubmit" type="submit" class="btn btn-primary btn-lg">Create My Account</button>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <small class="text-muted">By creating an account, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</small>
+                        </div>
+                    </form>
+
+                    <hr class="my-4">
+
+                    <div class="text-center">
+                        <p class="mb-0">Already have an account? <a asp-page="./Login" asp-route-returnUrl="@Model.ReturnUrl" class="fw-bold">Log In</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+@* Add Font Awesome if you want icons for social logins *@
+@* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMG4uH2rVCg8B0d0R/5TzL2yFxEV6eF1L9tQDh/" crossorigin="anonymous"> *@
+}

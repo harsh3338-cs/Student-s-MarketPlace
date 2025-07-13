@@ -1,0 +1,348 @@
+/* Existing base styles */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Adjusted focus style to be less intrusive or match your green theme */
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    /* box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb; */ /* Original blueish focus */
+    box-shadow: 0 0 0 0.25rem rgba(29, 191, 115, 0.5); /* Greenish focus, adjust color and opacity */
+}
+
+/* --- Sticky Footer Setup --- */
+/* html { */ /* This was duplicated, ensure it's defined once */
+/*  position: relative; */ /* Not needed with flexbox sticky footer */
+/*  min-height: 100%; */ /* Already handled by body's min-vh-100 in _Layout.cshtml */
+/* } */
+
+body {
+    /* margin-bottom: 60px; */ /* Remove this if using flexbox sticky footer from _Layout.cshtml */
+    /* The d-flex flex-column min-vh-100 on body in _Layout.cshtml handles sticky footer */
+}
+
+/* Floating label placeholder alignment - your existing styles */
+.form-floating > .form-control-plaintext::placeholder,
+.form-floating > .form-control::placeholder {
+    color: var(--bs-secondary-color); /* Uses Bootstrap's secondary color variable */
+    text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder,
+.form-floating > .form-control:focus::placeholder {
+    text-align: start;
+}
+
+/* --- Card and Button Styles (from your existing CSS, good for auth pages) --- */
+.card {
+    border: none; /* Removes default card border */
+}
+
+/* Primary button theme (Green) */
+.btn-primary {
+    background-color: #1dbf73; /* Your primary green */
+    border-color: #1dbf73;
+    /* font-weight: 500; */ /* Optional: for slightly bolder button text */
+}
+
+    .btn-primary:hover,
+    .btn-primary:focus { /* Added focus state */
+        background-color: #18a060; /* Darker green for hover/focus */
+        border-color: #18a060;
+        box-shadow: 0 0 0 0.25rem rgba(29, 191, 115, 0.5); /* Consistent focus glow */
+    }
+
+/* Social login button styling */
+.btn-outline-secondary.btn-lg {
+    border-color: #e4e5e7;
+    color: #62646a;
+    text-align: left;
+    padding-left: 1.5rem; /* Increased padding for icon space */
+    font-weight: 500;
+    display: flex; /* For aligning icon and text */
+    align-items: center; /* For aligning icon and text */
+}
+
+    .btn-outline-secondary.btn-lg:hover {
+        background-color: #f5f5f5;
+        color: #4a4c52; /* Slightly darken text on hover */
+    }
+
+    .btn-outline-secondary.btn-lg i {
+        margin-right: 0.75rem; /* Space between icon and text */
+        font-size: 1.2em;
+        width: 24px; /* Fixed width for icon alignment */
+        text-align: center;
+        line-height: 1; /* Ensure icon is vertically centered if it has its own line height */
+    }
+
+
+/* --- NEW STYLES FOR GREEN HEADER AND FOOTER --- */
+
+/* Define your custom green color variables for reusability */
+:root {
+    --ssm-primary-green: #1dbf73; /* Your main green from .btn-primary */
+    --ssm-primary-green-darker: #18a060; /* Darker shade for hovers */
+    --ssm-header-footer-text: #ffffff; /* White text for header/footer */
+    --ssm-header-footer-link-hover: rgba(255, 255, 255, 0.75); /* Slightly dimmer white for link hover */
+}
+
+/* Class to apply the custom green background */
+.bg-custom-green {
+    background-color: var(--ssm-primary-green) !important; /* Use !important if needed to override Bootstrap */
+}
+
+/* Main Site Header (where the <nav> resides) */
+/* The .site-header class was added to the <header> tag in _Layout.cshtml */
+/* The .bg-custom-green class was added to the <nav> tag in _Layout.cshtml */
+/* Bootstrap's .navbar-dark class (added to <nav>) should handle most text colors */
+
+/* Navbar link styling (ensure they are light on the green background) */
+/* .navbar-dark .navbar-nav .nav-link should already make them white/light-gray */
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--ssm-header-footer-text);
+    opacity: 0.9; /* Slightly less than full white for non-active links */
+}
+
+    .navbar-dark .navbar-nav .nav-link:hover,
+    .navbar-dark .navbar-nav .nav-link:focus,
+    .navbar-dark .navbar-nav .nav-link.active { /* Style for active link */
+        color: var(--ssm-header-footer-text);
+        opacity: 1; /* Full white for hover/focus/active */
+    }
+
+.navbar-dark .navbar-brand {
+    color: var(--ssm-header-footer-text);
+}
+
+    .navbar-dark .navbar-brand:hover,
+    .navbar-dark .navbar-brand:focus {
+        color: var(--ssm-header-footer-text);
+        opacity: 0.9;
+    }
+
+/* Navbar toggler icon color on dark background */
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-dark .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+
+/* Dropdown menu items (default Bootstrap dropdowns are light) */
+/* If you want dark dropdowns to match the header, more complex styling is needed */
+/* For now, assuming standard light dropdowns */
+.dropdown-menu .dropdown-item {
+    color: #212529; /* Default dark text */
+}
+
+    .dropdown-menu .dropdown-item:hover,
+    .dropdown-menu .dropdown-item:focus {
+        color: #1e2125;
+        background-color: #e9ecef; /* Light gray hover */
+    }
+
+
+/* Main Site Footer */
+/* The .site-footer and .bg-custom-green classes were added to the <footer> tag in _Layout.cshtml */
+.site-footer {
+    color: var(--ssm-header-footer-text); /* Ensures text is white */
+    padding-top: 1rem; /* Added padding from _Layout */
+    padding-bottom: 1rem; /* Added padding from _Layout */
+}
+
+    .site-footer a {
+        color: var(--ssm-header-footer-link-hover); /* Slightly dimmer white for links */
+        text-decoration: none;
+    }
+
+        .site-footer a:hover,
+        .site-footer a:focus {
+            color: var(--ssm-header-footer-text); /* Full white on hover */
+            text-decoration: underline;
+        }
+
+/* --- Styles for Auth Layout (if you have _AuthLayout.cshtml) --- */
+.auth-body-background {
+    background-color: #f0f2f5; /* A light, neutral background for login/register pages */
+}
+
+/* Assuming _AuthLayout has simple header/footer like in the example */
+.auth-header {
+    background-color: var(--ssm-primary-green);
+    color: var(--ssm-header-footer-text);
+    padding: 1.5rem 1rem; /* More padding for a simpler header */
+    text-align: center;
+}
+
+    .auth-header h1 {
+        margin-bottom: 0;
+        font-size: 1.75rem;
+    }
+
+.auth-footer {
+    background-color: var(--ssm-primary-green);
+    color: var(--ssm-header-footer-text);
+    padding: 1rem;
+    text-align: center;
+}
+
+    .auth-footer a {
+        color: var(--ssm-header-footer-link-hover);
+    }
+
+        .auth-footer a:hover {
+            color: var(--ssm-header-footer-text);
+        }
+
+/* wwwroot/css/site.css */
+
+/* --- Hero Section Styles --- */
+.hero-section {
+    position: relative; /* For the overlay */
+    /* background-image: url('../images/hero-background.jpg'); */ /* Uncomment and use your image */
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); /* Example Gradient if no image */
+    background-size: cover;
+    background-position: center center;
+    padding: 8rem 0; /* Adjust padding as needed */
+    min-height: 70vh; /* Make hero take up a good portion of the screen */
+    display: flex;
+    align-items: center; /* Vertically center content */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay to make text readable - adjust opacity */
+    z-index: 1;
+}
+
+.hero-section .container {
+    z-index: 2; /* Ensure content is above the overlay */
+    position: relative;
+}
+
+.hero-section h1 {
+    font-size: 3rem; /* Responsive font size for h1 */
+}
+
+.hero-section .lead {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.hero-btn {
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0.5rem;
+    border-width: 2px;
+}
+
+
+/* --- How It Works Section Styles --- */
+.how-it-works-section i { /* If you decide to use a wrapper class */
+    /* color: var(--ssm-primary-green); /* Use your theme color */
+}
+
+/* --- Featured Services Card Styles --- */
+.service-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    }
+
+/* --- Call to Action Section --- */
+.cta-section {
+    background-color: #f8f9fa; /* Light background for contrast */
+}
+
+    .cta-section .btn-success { /* Customizing if default success is not your primary green */
+        background-color: var(--ssm-primary-green);
+        border-color: var(--ssm-primary-green);
+    }
+
+        .cta-section .btn-success:hover {
+            background-color: var(--ssm-primary-green-darker);
+            border-color: var(--ssm-primary-green-darker);
+        }
+
+
+/* --- Scroll Animation --- */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+    .animate-on-scroll.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+/* Staggered animation delays */
+.animation-delay-1 {
+    transition-delay: 0.2s;
+}
+
+.animation-delay-2 {
+    transition-delay: 0.4s;
+}
+
+.animation-delay-3 {
+    transition-delay: 0.6s;
+}
+
+
+/* --- General Page Enhancements (you might already have some of these) --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Example clean font */
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600; /* Slightly bolder headings */
+}
+
+.text-primary { /* If you want to use Bootstrap's primary color consistently */
+    color: var(--ssm-primary-green) !important; /* Override with your green */
+}
+
+.btn-primary { /* Ensure your primary buttons use the green */
+    background-color: var(--ssm-primary-green);
+    border-color: var(--ssm-primary-green);
+}
+
+    .btn-primary:hover {
+        background-color: var(--ssm-primary-green-darker);
+        border-color: var(--ssm-primary-green-darker);
+    }
+
+.btn-outline-primary {
+    color: var(--ssm-primary-green);
+    border-color: var(--ssm-primary-green);
+}
+
+    .btn-outline-primary:hover {
+        color: #fff;
+        background-color: var(--ssm-primary-green);
+        border-color: var(--ssm-primary-green);
+    }
+
+/* If you use Font Awesome, ensure its CSS is linked in _Layout.cshtml or _AuthLayout.cshtml */
+/* Example: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" ... /> */

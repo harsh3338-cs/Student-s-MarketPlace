@@ -1,0 +1,106 @@
+﻿@model IEnumerable<StudentServicesMarketplace.Models.Order>
+@using StudentServicesMarketplace.Models 
+
+@{
+    ViewData["Title"] = "Incoming Orders";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    These are the orders placed by clients for the services you offer.
+</p>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info" role="alert">
+        You have no incoming orders at the moment.
+    </div>
+}
+else
+{
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Service Title</th>
+                <th>Client</th>
+                <th>Order Date</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model)
+            {
+                <tr>
+                    <td>@order.Id</td>
+                    <td>
+                        <a asp-controller="Services" asp-action="Details" asp-route-id="@order.ServiceId">@order.Service.Title</a>
+                    </td>
+                    <td>
+                        @order.Client.FirstName @order.Client.LastName <br />
+                        <small class="text-muted">@order.Client.Email</small>
+                    </td>
+                    <td>@order.OrderDate.ToLocalTime().ToString("g")</td>
+                    <td>$@order.PriceAtOrder.ToString("F2")</td>
+                    <td>
+                        <span class="badge bg-@(GetStatusBadgeClass(order.Status))">@order.Status</span>
+                    </td>
+                    <td>
+                        <a asp-controller="Orders" asp-action="Details" asp-route-id="@order.Id" class="btn btn-sm btn-info mb-1">View Details</a>
+                        @if (order.Status < OrderStatus.Completed && order.Status != OrderStatus.CancelledByClient && order.Status != OrderStatus.CancelledByStudent && order.Status != OrderStatus.PaymentFailed)
+                        {
+                            @* Basic status update form - more advanced could be a modal or dedicated page *@
+                            <form asp-action="UpdateStatus" asp-route-orderId="@order.Id" method="post" class="d-inline-block">
+                                @Html.AntiForgeryToken()
+                                <div class="input-group input-group-sm">
+                                    <select name="newStatus" class="form-select form-select-sm" asp-items="Html.GetEnumSelectList<OrderStatus>().Where(li => IsValidNextStatus(order.Status, (OrderStatus)Enum.Parse(typeof(OrderStatus), li.Value)))">
+                                        <option value="">Update Status</option>
+                                    </select>
+                                    <button type="submit" class="btn btn-sm btn-warning">Update</button>
+                                </div>
+                            </form>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@functions {
+    private string GetStatusBadgeClass(OrderStatus status)
+    {
+        return status switch
+        {
+            OrderStatus.PendingPayment => "secondary",
+            OrderStatus.PendingConfirmation => "info",
+            OrderStatus.PaymentProcessing => "primary",
+            OrderStatus.Confirmed => "success",
+            OrderStatus.InProgress => "primary",
+            OrderStatus.Completed => "dark",
+            OrderStatus.CancelledByClient => "danger",
+            OrderStatus.CancelledByStudent => "danger",
+            OrderStatus.PaymentFailed => "danger",
+            _ => "light"
+        };
+    }
+
+    // Helper to filter valid next statuses for the dropdown
+    // This is a basic example; your business logic for status transitions might be more complex
+    private bool IsValidNextStatus(OrderStatus currentStatus, OrderStatus nextStatus)
+    {
+        if (currentStatus == OrderStatus.PaymentFailed || currentStatus == OrderStatus.CancelledByClient || currentStatus == OrderStatus.CancelledByStudent || currentStatus == OrderStatus.Completed)
+        {
+            return false; // No updates from these terminal states by student
+        }
+        if (currentStatus == OrderStatus.Confirmed && (nextStatus == OrderStatus.InProgress || nextStatus == OrderStatus.CancelledByStudent)) return true;
+        if (currentStatus == OrderStatus.InProgress && (nextStatus == OrderStatus.Completed || nextStatus == OrderStatus.CancelledByStudent)) return true;
+        // Allow cancellation from pending states if payment hasn't fully processed
+        if ((currentStatus == OrderStatus.PendingPayment || currentStatus == OrderStatus.PendingConfirmation || currentStatus == OrderStatus.PaymentProcessing) && nextStatus == OrderStatus.CancelledByStudent) return true;
+
+        return false; // Default to not allowing the transition
+    }
+}
